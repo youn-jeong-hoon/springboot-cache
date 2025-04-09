@@ -1,7 +1,6 @@
 package com.example.cache;
 
 import com.example.cache.entity.User;
-import java.util.Optional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -19,7 +18,7 @@ public class UserController {
   public final UserService service;
 
   @GetMapping("/{id}")
-  public Optional<User> getUser(@PathVariable String id) {
+  public User getUser(@PathVariable String id) {
     return service.getUser(id);
   }
 
